@@ -1,0 +1,32 @@
+package com.example.cbm.services;
+import com.example.cbm.dtos.CustomerOrderPaymentDetails;
+import com.example.cbm.entities.Customers;
+import com.example.cbm.entities.Payments;
+import org.springframework.data.domain.Sort;
+import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.List;
+public interface CustomerServiceInterface {
+    String saveCustomer(Customers customers);
+    List<Customers> searchCustomersByName(String name);
+    List<Customers> searchCustomersByCity(String city);
+    Customers getCustomerByCustomerNumber(Integer customerNumber);
+    List<Customers> searchCustomersBySalesRepEmployeeNumber(Integer employeeNumber);
+    List<Customers> searchByCountry(String country);
+    Customers searchByPhoneNumber(String phone);
+    List<Customers> searchByContactLastName(String lastName);
+    Customers updateCustomerName(Integer customerNumber, String newName);
+    Customers updateContactLastName(Integer customerNumber, String newName);
+    Customers updateContactFirstName(Integer customerNumber, String newFirstName);
+    String updateCustomerAddress(Integer customerNumber, String newAddressLine1, String newAddressLine2, String newCity, String newState, String newCountry, String newPostalCode);
+    List<Customers> searchCustomersByPostalCode(String postalCode);
+    List<Customers> getCustomersByCreditRange(BigDecimal minCredit, BigDecimal maxCredit);
+    Collection<Customers> getCustomersByPage(int pageNo, String sortBy, Sort.Direction sortDirection, int pageSize);
+    List<Customers> searchCustomersByFirstName(String searchString);
+    List<Customers> searchCustomersByGreaterCreditLimit(BigDecimal creditLimit);
+    List<Customers> searchCustomersByLowerCreditLimit(BigDecimal creditLimit);
+    List<Payments> getPaymentDetailsForCustomer(Integer customerNumber);
+    List<Customers> searchCustomersByCreditLimit(BigDecimal creditLimt);
+    Collection<Object[]> getOrderDetailsForCustomer(Integer customerNumber);
+    Collection<CustomerOrderPaymentDetails> getOrderAndPaymentDetailsForCustomer(String customerName);
+}
