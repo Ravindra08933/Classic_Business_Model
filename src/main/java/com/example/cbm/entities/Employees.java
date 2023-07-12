@@ -9,6 +9,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table(name="employees")
 public class Employees {
     @Id
     @Digits(integer = 10, fraction = 0, message = "Customer Number must be an integer value")
