@@ -11,6 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name="productlines")
 public class ProductLines {
     @Id
     @GeneratedValue(generator = "randomStringGenerator")
