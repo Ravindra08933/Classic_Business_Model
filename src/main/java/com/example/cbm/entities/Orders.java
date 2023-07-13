@@ -11,6 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table(name = "orders")
 public class Orders {
     @Id
     @Digits(integer = 10, fraction = 0, message = "Customer Number must be an integer value")

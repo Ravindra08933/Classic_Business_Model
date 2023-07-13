@@ -8,6 +8,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table(name = "offices")
 public class Offices {
     @Id
     @GeneratedValue(generator = "randomStringGenerator")

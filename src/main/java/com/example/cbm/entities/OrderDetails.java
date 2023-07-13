@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table(name = "orderdetails")
 public class OrderDetails {
     @EmbeddedId
     private OrderDetailsId id;

@@ -8,6 +8,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Table(name = "employees")
 @Entity
 public class Employees {
     @Id
