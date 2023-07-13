@@ -11,7 +11,7 @@ import java.util.Date;
 @ToString
 @AllArgsConstructor
 @Entity
-@Table(name = "payments")
+@Table(name="payments")
 public class Payments {
     @Id
     @GeneratedValue(generator = "randomStringGenerator")
