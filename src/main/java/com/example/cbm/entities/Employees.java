@@ -8,7 +8,6 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "employees")
 @Entity
 @Table(name="employees")
 public class Employees {
